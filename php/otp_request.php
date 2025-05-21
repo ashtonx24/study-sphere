@@ -50,10 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';   // Replace with your SMTP server
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'asharc789@gmail.com'; // Replace with your SMTP username
+            $mail->Username   = 'your@email.com'; // Replace with your SMTP username
             // $mail->Password   = 'sensitive cred goes here';    // Replace with your SMTP password
-            $mail->SMTPSecure = 'tls';                     // or 'ssl'
-            $mail->Port       = 587;                       // or 465 for SSL
+            $mail->SMTPSecure = 'place';                     // 'tls' or 'ssl'
+            // $mail->Port       = portnum;                       // 587 or 465 for SSL
 
             // Recipients
             $mail->setFrom('asharc789@gmail.com', 'Study-Sphere');
