@@ -1,0 +1,76 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F2F5; /* Light gray background */
+    color: #2D2747; /* Dark color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 15px; /* Add padding to handle small screen sizes */
+}
+
+/* Card Styling */
+.card {
+    width: 100%;
+    max-width: 500px; /* Limit card width */
+    border: 1px solid #DEE2E6; /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Increase padding for better spacing */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #FEBB0B; /* Bright yellow */
+    text-shadow: 1px 1px #DEE2E6; /* Light shadow for text depth */
+}
+
+/* Form Styling */
+.form-group label {
+    font-weight: bold;
+    color: #2D2747; /* Dark color */
+}
+
+.form-control {
+    border: 1px solid #DEE2E6; /* Light border */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #02899C; /* Custom button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    color: #FFFFFF; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #026F79; /* Darker shade of button color */
+}
+
+/* Link Styling */
+.text-center a {
+    color: #02899C; /* Custom link color */
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}

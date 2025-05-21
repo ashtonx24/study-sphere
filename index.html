@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Sphere</title>
+    <!-- Favicons -->
+    <link href="assets\img\logo.PNG" rel="icon">
+    <link href="assets\img\logo.PNG" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets\css\styles.css">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="d-flex justify-content-between align-items-center p-3">
+        <div>
+            <a href="index.html"><img class="logo" src="assets\img\logo.PNG"></a>
+        </div>
+        <div class="right-section">
+            <button id="theme-toggle" class="theme-toggle-btn btn">☀️</button><!-- Theme Toggle Button -->
+            <a href="..\study-sphere\html\login.html" class="btn btn-primary mr-2">Login</a>
+            <a href="..\study-sphere\html\register.html" class="btn btn-success">Register</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container text-center my-5">
+        <h1>Welcome to Study-Sphere</h1>
+        <p>Your one-stop platform for all your educational needs. Explore courses, track your progress, and achieve your
+            learning goals with us.</p>
+        <div class="text_container">
+            <div class="text">Study-Sphere</div>
+        </div>
+        <!-- Informative Section -->
+        <section class="my-5">
+            <h2>About Study-Sphere</h2>
+            <p>Study-Sphere is a comprehensive online learning platform designed to help you find the best courses, and
+                achieve your educational goals. Whether you're looking to learn a new
+                skill, improve your knowledge, or advance your career, Study-Sphere has something for everyone.</p>
+            <p>Our platform offers a wide range of courses across various subjects, including technology, business,
+                arts, and more. With Study-Sphere, you can access high-quality educational content presented in blog
+                format,
+                complete with images and diagrams to enhance your learning experience.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="my-5">
+            <h2>Key Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Course and Blog Management</h5>
+                        <p>Explore a variety of courses organized into categories with rich media support.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Responsive Design</h5>
+                        <p>Enjoy a seamless experience across all devices with a mobile-friendly interface.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Performance and Scalability</h5>
+                        <p>Experience fast loading times and a platform that scales with your needs.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Developer Info Cards -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card-container">
+                        <span class="pro">PRO</span>
+                        <img class="round" src="assets\img\developer\dev1.jpg" alt="user" />
+                        <h3>Bobby Dsouza</h3>
+                        <h6>India</h6>
+                        <p>Full Stack Developer and <br /> Cyber Security</p>
+                        <div class="buttons">
+                            <a href="https://www.instagram.com/anon_x_31/"><button class="primary ghost">
+                                    Message
+                                </button></a>
+                        </div>
+                        <div class="skills">
+                            <h6>Skills</h6>
+                            <ul>
+                                <li>Linux</li>
+                                <li>React.js</li>
+                                <li>Node.js</li>
+                                <li>Python</li>
+                                <li>Django</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card-container">
+                        <span class="pro">PRO</span>
+                        <img class="round" src="assets\img\developer\dev2.jpg" alt="user" />
+                        <h3>Ashar Chougle</h3>
+                        <h6>India</h6>
+                        <p>Front-end Developer</p>
+                        <div class="buttons">
+                            <a href="https://www.instagram.com/ashton_x24/"><button class="primary ghost">
+                                    Message
+                                </button></a>
+                        </div>
+                        <div class="skills">
+                            <h6>Skills</h6>
+                            <ul>
+                                <li>Back End Development</li>
+                                <li>Database Management</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="text-center p-3">
+        <p>&copy; 2024 Study-Sphere. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets\js\script.js"></script>
+    <script>
+        class TextScramble {
+            constructor(el) {
+                this.el = el
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'
+                this.update = this.update.bind(this)
+            }
+            setText(newText) {
+                const oldText = this.el.innerText
+                const length = Math.max(oldText.length, newText.length)
+                const promise = new Promise((resolve) => this.resolve = resolve)
+                this.queue = []
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || ''
+                    const to = newText[i] || ''
+                    const start = Math.floor(Math.random() * 40)
+                    const end = start + Math.floor(Math.random() * 40)
+                    this.queue.push({ from, to, start, end })
+                }
+                cancelAnimationFrame(this.frameRequest)
+                this.frame = 0
+                this.update()
+                return promise
+            }
+            update() {
+                let output = ''
+                let complete = 0
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i]
+                    if (this.frame >= end) {
+                        complete++
+                        output += to
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar()
+                            this.queue[i].char = char
+                        }
+                        output += `<span class="dud">${char}</span>`
+                    } else {
+                        output += from
+                    }
+                }
+                this.el.innerHTML = output
+                if (complete === this.queue.length) {
+                    this.resolve()
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update)
+                    this.frame++
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
+        }
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+            'a lifelong learner,',
+            'an innovator,',
+            'a coding enthusiast,',
+            'an academic explorer,',
+            'a knowledge seeker,',
+            'a future leader,',
+            'a course creator,',
+            'a skill builder,',
+            'an education advocate,',
+            'a learning visionary,'
+
+        ]
+
+        const el = document.querySelector('.text')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 800)
+            })
+            counter = (counter + 1) % phrases.length
+        }
+
+        next()</script>
+
+
+</body>
+
+</html>
